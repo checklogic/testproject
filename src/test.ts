@@ -1,5 +1,5 @@
 export default function someDn(arg: string) {
-	console.log(132);
+	console.log(2222);
 
 	return '';
 }
