@@ -28,12 +28,12 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 		],
 	};
 
-	const svgrLoader = {
+	const svgrLoader: RuleSetRule = {
 		test: /\.svg$/,
 		use: ['@svgr/webpack'],
 	};
 
-	const fileLoader = {
+	const fileLoader: RuleSetRule = {
 		test: /\.(png|jpe?g|gif|woff)$/i,
 		use: [
 			{
@@ -42,5 +42,26 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 		],
 	};
 
-	return [typeScriptLoader, cssLoader, svgrLoader, fileLoader];
+	const babelLoader: RuleSetRule = {
+		test: /\.(js|jsx|tsx)$/,
+		exclude: /node_modules/,
+		use: {
+			loader: 'babel-loader',
+			options: {
+				presets: ['@babel/preset-env'],
+				plugins: [
+					'@babel/plugin-syntax-jsx',
+					[
+						'i18next-extract',
+						{
+							locales: ['ru', 'en'],
+							keyAsDefaultValue: true,
+						},
+					],
+				],
+			},
+		},
+	};
+
+	return [babelLoader, typeScriptLoader, cssLoader, svgrLoader, fileLoader];
 }
