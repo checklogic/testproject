@@ -1,5 +1,4 @@
 import { routeConfig } from 'features/config/routeConfig/routeConfig';
-import { AboutPage, MainPage } from 'pages';
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
