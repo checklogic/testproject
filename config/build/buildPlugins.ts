@@ -1,7 +1,13 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { WebpackPluginInstance, ProgressPlugin, DefinePlugin } from 'webpack';
+import {
+	WebpackPluginInstance,
+	ProgressPlugin,
+	DefinePlugin,
+	HotModuleReplacementPlugin,
+} from 'webpack';
 import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins({
 	paths,
@@ -19,5 +25,7 @@ export function buildPlugins({
 		new DefinePlugin({
 			__IS_DEV__: JSON.stringify(isDev),
 		}),
+		isDev &&
+			(new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()),
 	];
 }
