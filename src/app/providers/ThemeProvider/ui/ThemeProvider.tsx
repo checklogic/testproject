@@ -1,33 +1,33 @@
 import { FunctionComponent, ReactNode, useMemo, useState } from 'react';
 import {
-	LOCAL_STORAGE_THEME_KEY,
-	Theme,
-	ThemeContext,
+    LOCAL_STORAGE_THEME_KEY,
+    Theme,
+    ThemeContext,
 } from '../lib/ThemeContext';
 
 const defaultTheme =
-	(localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGTH;
+    (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGTH;
 
 interface ThemeProviderProps {
-	children: ReactNode;
+    children: ReactNode;
 }
 
 export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({
-	children,
+    children,
 }) => {
-	const [theme, setTheme] = useState<Theme>(defaultTheme);
+    const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-	const defaultProps = useMemo(
-		() => ({
-			theme,
-			setTheme,
-		}),
-		[theme]
-	);
+    const defaultProps = useMemo(
+        () => ({
+            theme,
+            setTheme,
+        }),
+        [theme]
+    );
 
-	return (
-		<ThemeContext.Provider value={defaultProps}>
-			{children}
-		</ThemeContext.Provider>
-	);
+    return (
+        <ThemeContext.Provider value={defaultProps}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
