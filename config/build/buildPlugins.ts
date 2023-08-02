@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {
     WebpackPluginInstance,
@@ -8,13 +9,20 @@ import {
 import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): WebpackPluginInstance[] {
     const devPlugins: WebpackPluginInstance[] = isDev
-        ? [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
+        ? [
+              new HotModuleReplacementPlugin(),
+              new ReactRefreshWebpackPlugin(),
+              new BundleAnalyzerPlugin({
+                  openAnalyzer: false,
+              }),
+          ]
         : [];
 
     return [
@@ -29,6 +37,7 @@ export function buildPlugins({
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
+
         ...devPlugins,
     ];
 }

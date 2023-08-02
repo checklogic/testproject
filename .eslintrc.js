@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:i18next/recommended',
+        'prettier',
     ],
 
     overrides: [
@@ -31,7 +32,7 @@ module.exports = {
     rules: {
         indent: [2, 4],
         'react/jsx-indent': [2, 4],
-        '@typescript-eslint/indent': [2, 4],
+        // '@typescript-eslint/indent': [2, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -51,9 +52,9 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
         __IS_DEV__: true,
     },
 };
-
