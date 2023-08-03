@@ -9,8 +9,8 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:i18next/recommended',
         'prettier',
+        'plugin:storybook/recommended',
     ],
-
     overrides: [
         {
             env: {
@@ -35,7 +35,9 @@ module.exports = {
         // '@typescript-eslint/indent': [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
         ],
         'react/reauire-default-props': 'off',
         'import/no-unresolved': 'off',
@@ -58,14 +60,23 @@ module.exports = {
                 ignoreAttribute: ['data-testid'],
             },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': [
+            'error',
+            {
+                ignoreComments: true,
+                code: 100,
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: [
+                '**/src/**/*.test.{ts,tsx}',
+                '**/src/**/*.stories.{ts,tsx}',
+            ],
             rules: {
                 'i18next/no-literal-string': 'off',
             },
