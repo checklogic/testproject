@@ -34,18 +34,6 @@ export default ({ config }: { config: Configuration }): Configuration => {
         });
     }
 
-    // if (config.module?.rules) {
-    //     config.module.rules = config.module.rules?.map((rule: RuleSetRule) => {
-    //         if (String(rule.test).includes('svg')) {
-    //             return { ...rule, exclude: /\.svg$/i };
-    //         }
-    //         return rule;
-    //     });
-    // }
-    // config.module?.rules?.push({
-    //     test: /\.svg$/,
-    //     use: ['@svgr/webpack'],
-    // });
     config.module?.rules?.push(buildCssLoaders(true));
     return config;
 };
