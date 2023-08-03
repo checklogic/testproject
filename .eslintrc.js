@@ -26,6 +26,15 @@ module.exports = {
                 sourceType: 'script',
             },
         },
+        {
+            files: [
+                '**/src/**/*.test.{ts,tsx}',
+                '**/src/**/*.stories.{ts,tsx}',
+            ],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -76,15 +85,4 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
-    overrides: [
-        {
-            files: [
-                '**/src/**/*.test.{ts,tsx}',
-                '**/src/**/*.stories.{ts,tsx}',
-            ],
-            rules: {
-                'i18next/no-literal-string': 'off',
-            },
-        },
-    ],
 };
