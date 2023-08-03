@@ -11,6 +11,11 @@ module.exports = {
         'prettier',
         'plugin:storybook/recommended',
     ],
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
     overrides: [
         {
             env: {
