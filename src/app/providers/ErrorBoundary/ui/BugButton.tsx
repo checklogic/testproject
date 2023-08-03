@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 // Компонент для тестирования ErrorBoundary
 export const BugButton: FC = () => {
@@ -18,7 +18,7 @@ export const BugButton: FC = () => {
     }, [error]);
 
     return (
-        <Button onClick={onThrow} theme={ThemeButton.CLEAR}>
+        <Button onClick={onThrow} theme={ButtonTheme.CLEAR}>
             {t('Прокинуть ошибку')}
         </Button>
     );
