@@ -13,7 +13,7 @@ export interface ComponentRenderOptions {
 
 export const ComponentRender = (
     component: ReactNode,
-    options: ComponentRenderOptions
+    options: ComponentRenderOptions = {}
 ): RenderResult => {
     const { route = '/', initialState } = options;
     return render(
