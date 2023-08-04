@@ -9,5 +9,8 @@
     "Произошла непредвиденная ошибка": "Something went wrong",
     "Обновить страницу": "Reload page",
     "Прокинуть ошибку": "Throw error",
-    "Войти": "Login"
+    "Войти": "Login",
+    "Значение": "Value",
+    "Увеличить": "Increment",
+    "Уменьшить": "Decrement"
 }
