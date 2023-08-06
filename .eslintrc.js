@@ -85,6 +85,14 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-misused-promises': [
+            2,
+            {
+                checksVoidReturn: {
+                    attributes: false,
+                },
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

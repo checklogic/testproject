@@ -14,7 +14,8 @@ export default ({ config }: { config: Configuration }): Configuration => {
     config.resolve?.extensions?.push('.ts', '.tsx');
 
     if (config.module?.rules) {
-        config.module.rules = config.module.rules?.map((rule: RuleSetRule) => {
+        const rules = config.module.rules as RuleSetRule[];
+        rules.map((rule: RuleSetRule) => {
             if (String(rule.test).includes('svg')) {
                 return { ...rule, exclude: /\.svg$/i };
             }

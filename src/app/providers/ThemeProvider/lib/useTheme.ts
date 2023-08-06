@@ -12,9 +12,9 @@ export function useTheme(): UseThemeResult {
     const toggleTheme = (): void => {
         const newTheme: Theme = theme === Theme.DARK ? Theme.LIGTH : Theme.DARK;
 
-        if (setTheme) setTheme(newTheme);
+        setTheme?.(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
-
+    document.body.className = theme || Theme.LIGTH;
     return { theme: theme || Theme.LIGTH, toggleTheme };
 }
