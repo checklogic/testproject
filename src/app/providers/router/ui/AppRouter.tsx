@@ -1,4 +1,4 @@
-import { routeConfig } from 'features/config/routeConfig/routeConfig';
+import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { ReactNode, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';

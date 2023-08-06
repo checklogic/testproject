@@ -9,7 +9,7 @@ interface PageLoaderProps {
 
 export const PageLoader: FC<PageLoaderProps> = ({ className }) => {
     return (
-        <div className={classNames(cls.PageLoader, {}, [className || ''])}>
+        <div className={classNames(cls.pageLoader, {}, [className || ''])}>
             <Spinner />
         </div>
     );

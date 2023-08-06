@@ -6,7 +6,7 @@ import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { AppLinkTheme, AppLink } from 'shared/ui/AppLink/AppLink';
-import { RoutePath } from 'features/config/routeConfig/routeConfig';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
 import MainIcon from 'shared/assets/icons/main-20-20.svg';
 
@@ -25,7 +25,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
     return (
         <div
             data-testid='sidebar'
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
                 className || '',
             ])}
         >

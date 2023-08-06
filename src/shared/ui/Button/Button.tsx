@@ -29,7 +29,7 @@ export const Button: FC<ButtonProps> = ({
     children,
     square = false,
     size = ButtonSize.M,
-    theme = ButtonTheme.CLEAR,
+    theme = ButtonTheme.OUTLINE,
     ...rest
 }) => {
     const mods: Record<string, boolean> = {
@@ -40,7 +40,7 @@ export const Button: FC<ButtonProps> = ({
 
     return (
         <button
-            className={classNames(cls.Button, mods, [className || ''])}
+            className={classNames(cls.button, mods, [className || ''])}
             {...rest}
         >
             {children}
