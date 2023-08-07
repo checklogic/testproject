@@ -20,7 +20,16 @@ export const Light: Story = {
         children:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, deleniti iste ipsa, ipsum temporibus quo perspiciatis atque voluptate tenetur sequi dolore accusamus, quasi labore voluptatibus quidem nobis. Ipsa, earum temporibus.',
     },
-    decorators: [ThemeDecorator(Theme.LIGTH)],
+    decorators: [
+        (Story) => {
+            document.body.className =
+                document.body.className
+                    .split(' ')
+                    .filter((el) => !el.includes('app_'))
+                    .join(' ') + ` ${Theme.LIGTH}`;
+            return <Story />;
+        },
+    ],
 };
 
 export const Dark: Story = {
@@ -28,5 +37,15 @@ export const Dark: Story = {
         children:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, deleniti iste ipsa, ipsum temporibus quo perspiciatis atque voluptate tenetur sequi dolore accusamus, quasi labore voluptatibus quidem nobis. Ipsa, earum temporibus.',
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [
+        (Story) => {
+            document.body.className =
+                document.body.className
+                    .split(' ')
+                    .filter((el) => !el.includes('app_'))
+                    .join(' ') + ` ${Theme.DARK}`;
+            return <Story />;
+        },
+        ThemeDecorator(Theme.DARK),
+    ],
 };
