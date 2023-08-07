@@ -112,3 +112,10 @@ export const SquareSizeXL: Story = {
         theme: ButtonTheme.INVERTED_BACKGROUND,
     },
 };
+
+export const Disabled: Story = {
+    args: {
+        children: 'Disabled',
+        disabled: true,
+    },
+};
