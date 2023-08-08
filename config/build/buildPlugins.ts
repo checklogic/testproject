@@ -21,6 +21,7 @@ export function buildPlugins({
               new ReactRefreshWebpackPlugin(),
               new BundleAnalyzerPlugin({
                   openAnalyzer: false,
+                  analyzerPort: 9222,
               }),
           ]
         : [];

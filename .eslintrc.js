@@ -94,6 +94,7 @@ module.exports = {
             },
         ],
         '@typescript-eslint/consistent-type-exports': 'off',
+        '@typescript-eslint/no-dynamic-delete': 'off',
     },
     globals: {
         __IS_DEV__: true,

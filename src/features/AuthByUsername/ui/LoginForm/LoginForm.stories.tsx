@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { LoginForm } from './LoginForm';
+import LoginForm from './LoginForm';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
@@ -11,6 +11,7 @@ const meta = {
             loginForm: {
                 username: 'username',
                 password: 'password',
+                isLoading: false,
             },
         }),
     ],
@@ -31,6 +32,7 @@ export const PrimaryWithError: Story = {
                 username: 'username',
                 password: 'password',
                 error: 'error',
+                isLoading: false,
             },
         }),
     ],
