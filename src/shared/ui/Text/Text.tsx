@@ -23,7 +23,7 @@ export const Text: FC<TextProps> = memo(function Text({
     return (
         <div
             className={classNames(cls.textWrapper, { [cls[theme]]: true }, [
-                className || '',
+                className,
             ])}
         >
             {title && <p className={cls.title}>{title}</p>}

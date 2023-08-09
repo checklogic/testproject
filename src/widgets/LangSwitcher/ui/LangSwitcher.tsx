@@ -22,7 +22,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = memo(function LangSwitcher({
     return (
         <div>
             <Button
-                className={classNames(cls.langSwitcher, {}, [className || ''])}
+                className={classNames(cls.langSwitcher, {}, [className])}
                 theme={ButtonTheme.CLEAR}
                 onClick={toggle}
             >

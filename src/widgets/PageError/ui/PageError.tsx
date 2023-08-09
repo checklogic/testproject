@@ -16,7 +16,7 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.pageError, {}, [className || ''])}>
+        <div className={classNames(cls.pageError, {}, [className])}>
             <p> {t('Произошла непредвиденная ошибка')}</p>
             <Button theme={ButtonTheme.CLEAR} onClick={reloadPage}>
                 {t('Обновить страницу')}

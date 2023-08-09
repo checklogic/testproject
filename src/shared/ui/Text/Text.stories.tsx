@@ -57,7 +57,7 @@ export const OnlyTextDark: Story = {
     decorators: [ThemeDecorator(Theme.DARK)],
 };
 
-export const error: Story = {
+export const Error: Story = {
     args: {
         title: 'Title',
         text: 'Text',

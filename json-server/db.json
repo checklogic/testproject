@@ -15,15 +15,13 @@
     ],
     "comments": [{ "id": "1", "body": "some comment", "postId": 1 }],
     "profile": {
-        "profile": {
-            "first": "Elco",
-            "lastname": "Elcome",
-            "age": 21,
-            "currency": "RUB",
-            "country": "Russia",
-            "city": "Moscow",
-            "username": "admin",
-            "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
-        }
+        "first": "Elco",
+        "lastname": "Elcome",
+        "age": 21,
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Moscow",
+        "username": "admin",
+        "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     }
 }

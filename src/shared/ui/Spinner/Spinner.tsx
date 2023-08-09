@@ -8,7 +8,7 @@ interface SpinnerProps {
 
 export const Spinner: FC<SpinnerProps> = ({ className }) => {
     return (
-        <div className={classNames(cls['lds-ring'], {}, [className || ''])}>
+        <div className={classNames(cls['lds-ring'], {}, [className])}>
             <div></div>
             <div></div>
             <div></div>

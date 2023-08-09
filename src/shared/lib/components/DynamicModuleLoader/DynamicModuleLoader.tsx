@@ -37,8 +37,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = ({
                 });
             }
         };
-        // eslint-disable-next-line
-    }, []);
+    }, [dispatch, reducers, removeAfterUnmount, store.reducerManager]);
 
     return <>{children}</>;
 };

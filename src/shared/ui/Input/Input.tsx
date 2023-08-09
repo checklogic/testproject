@@ -58,7 +58,7 @@ export const Input = memo(function Input({
     };
 
     return (
-        <div className={classNames(cls.inputWrapper, {}, [className || ''])}>
+        <div className={classNames(cls.inputWrapper, {}, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>{`${placeholder}` + '>'}</div>
             )}

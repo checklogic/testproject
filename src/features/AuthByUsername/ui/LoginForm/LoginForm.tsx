@@ -67,7 +67,7 @@ const LoginForm = memo(function LoginFormInMemo({
             removeAfterUnmount={false}
             reducers={initialReducers}
         >
-            <div className={classNames(cls.loginForm, {}, [className || ''])}>
+            <div className={classNames(cls.loginForm, {}, [className])}>
                 <Text title={t('Форма авторизации')} />
                 {error && <Text text={error} theme={TextTheme.ERROR} />}
                 <Input
