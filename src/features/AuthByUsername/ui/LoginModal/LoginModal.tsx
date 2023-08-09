@@ -1,7 +1,7 @@
 import { FC, Suspense } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
+import { Spinner } from 'shared/ui/Spinner/Spinner';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 import cls from './LoginModal.module.scss';
 
@@ -23,7 +23,7 @@ export const LoginModal: FC<LoginModalProps> = ({
             onClose={onClose}
             className={classNames(cls.loginModal, {}, [className || ''])}
         >
-            <Suspense fallback={<PageLoader />}>
+            <Suspense fallback={<Spinner />}>
                 <LoginFormAsync onSuccess={onClose} />
             </Suspense>
         </Modal>

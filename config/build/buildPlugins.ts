@@ -14,6 +14,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 export function buildPlugins({
     paths,
     isDev,
+    apiUrl,
 }: BuildOptions): WebpackPluginInstance[] {
     const devPlugins: WebpackPluginInstance[] = isDev
         ? [
@@ -37,6 +38,7 @@ export function buildPlugins({
         }),
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
         }),
 
         ...devPlugins,

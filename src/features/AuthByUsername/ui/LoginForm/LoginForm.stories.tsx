@@ -6,15 +6,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 const meta = {
     component: LoginForm,
     title: 'Feature/LoginForm',
-    decorators: [
-        StoreDecorator({
-            loginForm: {
-                username: 'username',
-                password: 'password',
-                isLoading: false,
-            },
-        }),
-    ],
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;

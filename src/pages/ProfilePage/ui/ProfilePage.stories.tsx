@@ -7,16 +7,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 const meta = {
     component: ProfilePage,
     title: 'Pages/ProfilePage',
-    decorators: [
-        StoreDecorator({
-            profile: {
-                data: undefined,
-                error: undefined,
-                isLoading: false,
-                readonly: true,
-            },
-        }),
-    ],
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof ProfilePage>;
 
 export default meta;
