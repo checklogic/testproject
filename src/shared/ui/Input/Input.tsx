@@ -15,12 +15,12 @@ type HTMLInputProps = Omit<
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value: string;
     onChange?: (value: string) => void;
     autoFocus?: boolean;
 }
 
-export const Input = memo(function InputUI({
+export const Input = memo(function Input({
     className,
     value,
     onChange,

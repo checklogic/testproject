@@ -1,6 +1,5 @@
 import {
     CombinedState,
-    DeepPartial,
     Reducer,
     ReducersMapObject,
     configureStore,
@@ -14,6 +13,7 @@ export function createReduxStore(
     initialState?: StateSchema,
     asyncReducers?: ReducersMapObject<StateSchema>
 ) {
+    // @ts-expect-error
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         counter: counterReducer,
@@ -33,3 +33,5 @@ export function createReduxStore(
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
