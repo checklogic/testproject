@@ -1,15 +1,14 @@
+import { Country, CountrySelect } from 'app_entities/Country';
+import { Currency, CurrencySelect } from 'app_entities/Currency';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Input } from 'shared/ui/Input/Input';
 import { Spinner } from 'shared/ui/Spinner/Spinner';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Select } from 'shared/ui/Select/Select';
-import { Currency, CurrencySelect } from 'app_entities/Currency';
-import { Country, CountrySelect } from 'app_entities/Country';
 
 interface ProfileCardProps {
     className?: string;
@@ -96,7 +95,7 @@ export const ProfileCard: FC<ProfileCardProps> = ({
                 />
                 <Input
                     value={data?.lastname || ''}
-                    placeholder={t('Ваше фамилия')}
+                    placeholder={t('Ваша фамилия')}
                     onChange={onChangeLastname}
                     className={cls.input}
                     readonly={readonly}

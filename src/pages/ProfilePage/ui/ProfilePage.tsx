@@ -37,7 +37,7 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
 
-    const data = useSelector(getProfileData);
+    // const data = useSelector(getProfileData);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
@@ -57,7 +57,9 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     };
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstname = useCallback(
