@@ -4,7 +4,9 @@ import {
     Reducer,
     ReducersMapObject,
     EnhancedStore,
+    Dispatch,
 } from '@reduxjs/toolkit';
+import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { CounterSchema } from 'app_entities/Counter';
 import { ProfileSchema } from 'app_entities/Profile';
 import { UserSchema } from 'app_entities/User';
@@ -44,10 +46,11 @@ export interface ThunkExtraArg {
 }
 
 export interface ThunkConfig<T> {
+    state: StateSchema;
     rejectValue: T;
     extra: ThunkExtraArg;
 }
 
-export interface AppStore extends EnhancedStore<StateSchema> {
-    reducerManager?: ReducerManager;
-}
+// export interface AppStore extends ToolkitStore<StateSchema> {
+//     reducerManager?: ReducerManager;
+// }

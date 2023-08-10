@@ -17,7 +17,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     };
 
     const fileLoader: RuleSetRule = {
-        test: /\.(png|jpe?g|gif|woff|ttf)$/i,
+        test: /\.(png|jpe?g|gif|woff|ttf|webp)$/i,
         use: [
             {
                 loader: 'file-loader',

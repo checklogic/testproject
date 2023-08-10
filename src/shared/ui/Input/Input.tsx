@@ -5,19 +5,20 @@ import React, {
     useRef,
     useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange'
+    'value' | 'onChange' | 'readonly'
 >;
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value: string;
+    value: string | number;
     onChange?: (value: string) => void;
     autoFocus?: boolean;
+    readonly?: boolean;
 }
 
 export const Input = memo(function Input({
@@ -27,6 +28,7 @@ export const Input = memo(function Input({
     type = 'text',
     placeholder,
     autoFocus,
+    readonly,
     ...rest
 }: InputProps) {
     const ref = useRef<HTMLInputElement>(null);
@@ -57,6 +59,8 @@ export const Input = memo(function Input({
         setCarriagePosition(e?.target?.selectionStart || 0);
     };
 
+    const isCarriageVisible = isFocused && !readonly;
+
     return (
         <div className={classNames(cls.inputWrapper, {}, [className])}>
             {placeholder && (
@@ -72,9 +76,10 @@ export const Input = memo(function Input({
                     onBlur={onBlur}
                     onFocus={onFocus}
                     onSelect={onSelect}
+                    readOnly={readonly}
                     {...rest}
                 />
-                {isFocused && (
+                {isCarriageVisible && (
                     <span
                         className={cls.carriage}
                         style={{ left: `${carriagePosition * 7}px` }}

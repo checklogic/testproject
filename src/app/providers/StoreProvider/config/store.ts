@@ -1,17 +1,15 @@
 import {
-    AnyAction,
     CombinedState,
     Reducer,
     ReducersMapObject,
-    ThunkDispatch,
     configureStore,
 } from '@reduxjs/toolkit';
 import { counterReducer } from 'app_entities/Counter';
 import { userReducer } from 'app_entities/User';
-import { $api } from 'shared/api/api';
-import { AppStore, StateSchema } from './StateSchema';
-import { createReducerManager } from './reducerManager';
 import { NavigateOptions, To } from 'react-router-dom';
+import { $api } from 'shared/api/api';
+import { StateSchema } from './StateSchema';
+import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(
     initialState?: StateSchema,
@@ -30,7 +28,7 @@ export function createReduxStore(
         navigate,
     };
 
-    const store: AppStore = configureStore({
+    const store = configureStore({
         reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
@@ -42,13 +40,10 @@ export function createReduxStore(
             }),
     });
 
+    // @ts-expect-error
     store.reducerManager = reducerManager;
 
     return store;
 }
 
-export type AppDispatch = ThunkDispatch<
-    DeepPartial<StateSchema>,
-    any,
-    AnyAction
->;
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
