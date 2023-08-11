@@ -1,12 +1,11 @@
-import { FC, memo, useMemo } from 'react';
+import { getUserAuthData } from 'app_entities/User';
+import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { SidebarItemType } from 'widgets/Sidebar/model/Items';
 import cls from './SidebarItem.module.scss';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { getUserAuthData } from 'app_entities/User';
-import { useSelector } from 'react-redux';
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
 interface SidebarItemProps {
     item: SidebarItemType;

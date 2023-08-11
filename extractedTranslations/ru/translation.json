@@ -1,7 +1,10 @@
 {
   "Article Details id": "Article Details id",
+  "ArticleCodeBlockComponent": "ArticleCodeBlockComponent",
   "ArticleDetails": "ArticleDetails",
   "ArticleDetailsPage": "ArticleDetailsPage",
+  "ArticleImageBlockComponent": "ArticleImageBlockComponent",
+  "ArticleTextBlockComponent": "ArticleTextBlockComponent",
   "ArticlesPage": "ArticlesPage",
   "ProfilePage": "ProfilePage",
   "ProfilePageHeader": "ProfilePageHeader",

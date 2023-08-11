@@ -1,24 +1,30 @@
-import { FC } from 'react';
+import { ArticleImageBlock } from 'app_entities/Article/module/types/article';
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Text, TextAlign } from 'shared/ui/Text/Text';
 import cls from './ArticleImageBlockComponent.module.scss';
-import { useTranslation } from 'react-i18next';
 
 interface ArticleImageBlockComponentProps {
     className?: string;
+    block: ArticleImageBlock;
 }
 
-export const ArticleImageBlockComponent: FC<
-    ArticleImageBlockComponentProps
-> = ({ className }) => {
-    const { t } = useTranslation();
-
-    return (
-        <div
-            className={classNames(cls.articleImageBlockComponent, {}, [
-                className,
-            ])}
-        >
-            {t('ArticleImageBlockComponent')}
-        </div>
-    );
-};
+export const ArticleImageBlockComponent = memo(
+    function ArticleImageBlockComponent({
+        className,
+        block,
+    }: ArticleImageBlockComponentProps) {
+        return (
+            <div
+                className={classNames(cls.articleImageBlockComponent, {}, [
+                    className,
+                ])}
+            >
+                <img alt={block.title} src={block.src} className={cls.img} />
+                {block.title && (
+                    <Text text={block.title} className={TextAlign.CENTER} />
+                )}
+            </div>
+        );
+    }
+);

@@ -3,7 +3,7 @@ import ArticlesPage from './ArticlesPage';
 
 const meta = {
     component: ArticlesPage,
-    title: '-/ArticlesPage',
+    title: 'pages/ArticlesPage',
     decorators: [],
 } satisfies Meta<typeof ArticlesPage>;
 

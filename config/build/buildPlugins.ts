@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {
     WebpackPluginInstance,

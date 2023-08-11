@@ -40,7 +40,7 @@ export function createReduxStore(
             }),
     });
 
-    // @ts-expect-error
+    // @ts-expect-error async behavior
     store.reducerManager = reducerManager;
 
     return store;

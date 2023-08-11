@@ -1,10 +1,8 @@
-import { User, userActions } from 'app_entities/User';
-import axios from 'axios';
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { fetchProfileData } from './fetchProfileData';
-import { Profile } from '../../types/profile';
-import { Currency } from 'app_entities/Currency';
 import { Country } from 'app_entities/Country';
+import { Currency } from 'app_entities/Currency';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { Profile } from '../../types/profile';
+import { fetchProfileData } from './fetchProfileData';
 
 const data: Profile = {
     first: 'Elco',
