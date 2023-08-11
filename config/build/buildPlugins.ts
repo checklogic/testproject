@@ -16,17 +16,20 @@ export function buildPlugins({
     isDev,
     apiUrl,
     project,
+    needAnalyser,
 }: BuildOptions): WebpackPluginInstance[] {
     const devPlugins: WebpackPluginInstance[] = isDev
-        ? [
-              new HotModuleReplacementPlugin(),
-              new ReactRefreshWebpackPlugin(),
-              new BundleAnalyzerPlugin({
-                  openAnalyzer: false,
-                  analyzerPort: 9222,
-              }),
-          ]
+        ? [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
         : [];
+
+    if (needAnalyser) {
+        devPlugins.push(
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+                analyzerPort: 9222,
+            })
+        );
+    }
 
     return [
         new HtmlWebpackPlugin({

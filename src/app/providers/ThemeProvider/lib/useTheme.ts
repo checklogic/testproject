@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { useContext } from 'react';
 import { Theme, ThemeContext } from './ThemeContext';
 import { LOCALSTORAGE_THEME_KEY } from 'shared/const/localstarage';
@@ -11,7 +12,20 @@ export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 
     const toggleTheme = (): void => {
-        const newTheme: Theme = theme === Theme.DARK ? Theme.LIGTH : Theme.DARK;
+        let newTheme: Theme;
+        switch (theme) {
+            case Theme.LIGTH:
+                newTheme = Theme.DARK;
+                break;
+            case Theme.DARK:
+                newTheme = Theme.THIRD;
+                break;
+            case Theme.THIRD:
+                newTheme = Theme.LIGTH;
+                break;
+            default:
+                newTheme = Theme.LIGTH;
+        }
 
         setTheme?.(newTheme);
         localStorage.setItem(LOCALSTORAGE_THEME_KEY, newTheme);
