@@ -62,37 +62,47 @@ const LoginForm = memo(function LoginFormInMemo({
         }
     }, [dispatch, onSuccess, password, username]);
 
+    const handleSubmit = useCallback(
+        (e: React.FormEvent<HTMLFormElement>) => {
+            e.preventDefault();
+            onLoginClick();
+        },
+        [onLoginClick]
+    );
+
     return (
         <DynamicModuleLoader
             removeAfterUnmount={false}
             reducers={initialReducers}
         >
-            <div className={classNames(cls.loginForm, {}, [className])}>
-                <Text title={t('Форма авторизации')} />
-                {error && <Text text={error} theme={TextTheme.ERROR} />}
-                <Input
-                    autoFocus
-                    placeholder={t('Введите логин')}
-                    type='text'
-                    className={cls.input}
-                    onChange={onChangeUsername}
-                    value={username || ''}
-                />
-                <Input
-                    placeholder={t('Введите пароль')}
-                    type='text'
-                    className={cls.input}
-                    onChange={onChangePassword}
-                    value={password || ''}
-                />
-                <Button
-                    disabled={isLoading}
-                    className={cls.loginBtn}
-                    onClick={onLoginClick}
-                >
-                    {t('Войти')}
-                </Button>
-            </div>
+            <form onSubmit={handleSubmit}>
+                <div className={classNames(cls.loginForm, {}, [className])}>
+                    <Text title={t('Форма авторизации')} />
+                    {error && <Text text={error} theme={TextTheme.ERROR} />}
+                    <Input
+                        autoFocus
+                        placeholder={t('Введите логин')}
+                        type='text'
+                        className={cls.input}
+                        onChange={onChangeUsername}
+                        value={username || ''}
+                    />
+                    <Input
+                        placeholder={t('Введите пароль')}
+                        type='text'
+                        className={cls.input}
+                        onChange={onChangePassword}
+                        value={password || ''}
+                    />
+                    <Button
+                        disabled={isLoading}
+                        className={cls.loginBtn}
+                        onClick={onLoginClick}
+                    >
+                        {t('Войти')}
+                    </Button>
+                </div>
+            </form>
         </DynamicModuleLoader>
     );
 });
