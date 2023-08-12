@@ -21,7 +21,7 @@ describe('fetchProfileData.test', () => {
 
         thunk.api.get.mockResolvedValue(Promise.resolve({ data }));
 
-        const result = await thunk.callThunk(undefined);
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
@@ -33,7 +33,7 @@ describe('fetchProfileData.test', () => {
         thunk.api.get.mockResolvedValue(
             Promise.resolve({ message: 'AUTH ERROR' })
         );
-        const result = await thunk.callThunk(undefined);
+        const result = await thunk.callThunk('1');
 
         expect(result.meta.requestStatus).toBe('rejected');
     });
