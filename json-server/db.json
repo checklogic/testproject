@@ -123,7 +123,8 @@
             "id": 1,
             "username": "admin",
             "password": "123",
-            "role": "ADMIN"
+            "role": "ADMIN",
+            "avatar": "https://ichef.bbci.co.uk/news/800/cpsprodpb/6969/production/_93558962_istock-586160412.jpg"
         },
         {
             "id": "2",
