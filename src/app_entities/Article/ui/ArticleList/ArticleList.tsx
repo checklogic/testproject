@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleList.module.scss';
-import { useTranslation } from 'react-i18next';
 import { Article, ArticleView } from '../../module/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
@@ -27,8 +26,6 @@ export const ArticleList = memo(function ArticleList({
     isLoading,
     view = ArticleView.SMALL,
 }: ArticleListProps) {
-    const { t } = useTranslation();
-
     const renderArticles = (el: Article) => {
         return (
             <ArticleListItem
@@ -40,17 +37,18 @@ export const ArticleList = memo(function ArticleList({
         );
     };
 
-    if (isLoading) {
-        return (
-            <div className={classNames('', {}, [className, cls[view]])}>
-                {getSkeletons(view)}
-            </div>
-        );
-    }
+    // if (isLoading) {
+    //     return (
+    //         <div className={classNames('', {}, [className, cls[view]])}>
+    //             {getSkeletons(view)}
+    //         </div>
+    //     );
+    // }
 
     return (
         <div className={classNames('', {}, [className, cls[view]])}>
             {articles.length ? articles.map(renderArticles) : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 });

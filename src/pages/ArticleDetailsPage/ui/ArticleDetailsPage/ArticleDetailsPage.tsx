@@ -23,6 +23,7 @@ import {
 import cls from './ArticleDetailsPage.module.scss';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -57,12 +58,18 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
     });
 
     if (!id) {
-        return null;
+        return (
+            <Page
+                className={classNames(cls.articleDetailsPage, {}, [className])}
+            >
+                {t('Статья не найдена')}
+            </Page>
+        );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div
+            <Page
                 className={classNames(cls.articleDetailsPage, {}, [className])}
             >
                 <Button
@@ -76,7 +83,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
                 <Text title={t('Комментарии')} className={cls.commentTitle} />
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList isLoading={isLoading} comments={comments} />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
