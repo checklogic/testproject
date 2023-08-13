@@ -1,24 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
-import { Article } from 'app_entities/Article';
+import { ArticleListItem } from './ArticleListItem';
 import {
-    ArticleType,
+    Article,
     ArticleBlockType,
-} from 'app_entities/Article/module/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+    ArticleType,
+    ArticleView,
+} from '../../module/types/article';
 
 const article: Article = {
     id: '1',
-    title: 'Javascript news',
+    title: 'Javascript news asfasjf asfjkask f',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
+    createdAt: '26.02.2022',
     user: {
         id: '1',
-        username: 'Elco',
+        username: 'Ulbi tv',
+        avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
     },
-    createdAt: '26.02.2022',
-    type: [ArticleType.IT],
+    type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'] as ArticleType[],
     blocks: [
         {
             id: '1',
@@ -82,21 +83,24 @@ const article: Article = {
 };
 
 const meta = {
-    component: ArticleDetailsPage,
-    title: 'pages/ArticleDetailsPage',
-    decorators: [
-        StoreDecorator({
-            articleDetails: {
-                data: article,
-            },
-        }),
-    ],
-} satisfies Meta<typeof ArticleDetailsPage>;
+    component: ArticleListItem,
+    title: 'app_entities/Article/ArticleListItem',
+    decorators: [],
+} satisfies Meta<typeof ArticleListItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-    args: {},
-    decorators: [],
+export const BIG: Story = {
+    args: {
+        view: ArticleView.BIG,
+        article,
+    },
+};
+
+export const SMALL: Story = {
+    args: {
+        view: ArticleView.SMALL,
+        article,
+    },
 };

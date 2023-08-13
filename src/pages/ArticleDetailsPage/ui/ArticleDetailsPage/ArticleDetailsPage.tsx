@@ -4,7 +4,7 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -21,6 +21,8 @@ import {
     getArticleComments,
 } from '../../model/slice/articleDetailsCommentSlice';
 import cls from './ArticleDetailsPage.module.scss';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -37,6 +39,11 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
     const isLoading = useSelector(getArticleCommentsIsLoading);
     // const error = useSelector(getArticleCommentsError);
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
+    const onBackToList = useCallback(() => {
+        navigate(RoutePath.articles);
+    }, [navigate]);
 
     const onSendComment = useCallback(
         (text: string) => {
@@ -58,6 +65,13 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
             <div
                 className={classNames(cls.articleDetailsPage, {}, [className])}
             >
+                <Button
+                    onClick={onBackToList}
+                    theme={ButtonTheme.OUTLINE}
+                    className={cls.backBtn}
+                >
+                    {t('Назад к списку')}
+                </Button>
                 <ArticleDetails id={id} />
                 <Text title={t('Комментарии')} className={cls.commentTitle} />
                 <AddCommentForm onSendComment={onSendComment} />
