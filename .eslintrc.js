@@ -100,6 +100,8 @@ module.exports = {
         '@typescript-eslint/await-thenable': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
         'n/no-callback-literal': 'off',
+        '@typescript-eslint/array-type': 'off',
+        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     },
     globals: {
         __IS_DEV__: true,

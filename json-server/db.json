@@ -35,7 +35,7 @@
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["ECONOMICS"],
             "blocks": [
                 {
                     "id": "1",
@@ -102,8 +102,8 @@
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://assets.rbl.ms/33364099/origin.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 1222,
+            "createdAt": "26.02.2023",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -124,8 +124,8 @@
             "title": "Kotlin news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://developer.okta.com/assets-jekyll/blog/tutorial-kotlin-beginners-guide/kotlin-logo-social-21c8518b19eb96d96f35e0057bb92b7e1281a24820e0fa09e39c42f184bd7faa.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 2022,
+            "createdAt": "02.02.2022",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -146,10 +146,10 @@
             "title": "TypeScript news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://www.datocms-assets.com/48401/1628645197-learn-typescript.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 551,
+            "createdAt": "26.05.2022",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["ECONOMICS"],
             "blocks": [
                 {
                     "id": "1",
@@ -168,8 +168,8 @@
             "title": "Java news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://www.tadviser.ru/images/5/54/Java-19.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 22,
+            "createdAt": "26.01.2020",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -190,8 +190,8 @@
             "title": "Go news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://blog.skillfactory.ru/wp-content/uploads/2023/02/1200px-go_logo_blue.svg-3712956.png.webp",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 4022,
+            "createdAt": "01.06.2021",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -212,10 +212,10 @@
             "title": "Erlang news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://serokell.io/files/qa/qap56dhf.1_(41)_(1).jpg",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 912,
+            "createdAt": "30.05.2022",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["ECONOMICS"],
             "blocks": [
                 {
                     "id": "1",
@@ -234,8 +234,8 @@
             "title": "C# news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://media.proglib.io/wp-uploads/2018/03/maxresdefault.jpg",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 672,
+            "createdAt": "04.04.2023",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -256,10 +256,10 @@
             "title": "C++ news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230703144619/CPP-Language.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 657,
+            "createdAt": "20.07.2022",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["SIENCE"],
             "blocks": [
                 {
                     "id": "1",
@@ -278,8 +278,8 @@
             "title": "Html news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://eurobyte.ru/img/articles/chto-takoe-html/image1.jpeg",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 212,
+            "createdAt": "06.10.2022",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -300,8 +300,8 @@
             "title": "Css news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://ru.w3docs.com/uploads/media/default/0001/05/6d07a36ebe6d55273b39440f2391f1d7e6d4092a.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 15522,
+            "createdAt": "11.01.2020",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -322,10 +322,10 @@
             "title": "Scss news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://i0.wp.com/techprimelab.com/wp-content/uploads/2020/06/SCSS-or-CSS.jpg?w=1200&ssl=1",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 5022,
+            "createdAt": "21.07.2022",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["SIENCE"],
             "blocks": [
                 {
                     "id": "1",
@@ -344,8 +344,8 @@
             "title": "Pascal news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://thecode.media/wp-content/uploads/2020/04/unnamed-5.png",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 44,
+            "createdAt": "06.02.2019",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -366,10 +366,10 @@
             "title": "Basic news",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Basic_interpreter_on_the_DVK_computer.JPG/330px-Basic_interpreter_on_the_DVK_computer.JPG",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 122,
+            "createdAt": "03.12.2018",
             "userId": "1",
-            "type": ["IT"],
+            "type": ["SIENCE"],
             "blocks": [
                 {
                     "id": "1",
@@ -385,11 +385,11 @@
         },
         {
             "id": "15",
-            "title": "Basic news",
+            "title": "Basic news lalala",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Basic_interpreter_on_the_DVK_computer.JPG/330px-Basic_interpreter_on_the_DVK_computer.JPG",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 4352,
+            "createdAt": "11.03.2017",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -407,11 +407,11 @@
         },
         {
             "id": "16",
-            "title": "Basic news",
+            "title": "Basic news ccc",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Basic_interpreter_on_the_DVK_computer.JPG/330px-Basic_interpreter_on_the_DVK_computer.JPG",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 777,
+            "createdAt": "05.05.2023",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -429,11 +429,11 @@
         },
         {
             "id": "17",
-            "title": "Basic news",
+            "title": "Basic news bbb",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Basic_interpreter_on_the_DVK_computer.JPG/330px-Basic_interpreter_on_the_DVK_computer.JPG",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 992,
+            "createdAt": "28.08.2020",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
@@ -451,11 +451,11 @@
         },
         {
             "id": "18",
-            "title": "Basic news",
+            "title": "Basic news aaa",
             "subtitle": "Что нового в JS за 2022 год?",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Basic_interpreter_on_the_DVK_computer.JPG/330px-Basic_interpreter_on_the_DVK_computer.JPG",
-            "views": 1022,
-            "createdAt": "26.02.2022",
+            "views": 1000,
+            "createdAt": "29.11.2021",
             "userId": "1",
             "type": ["IT"],
             "blocks": [
