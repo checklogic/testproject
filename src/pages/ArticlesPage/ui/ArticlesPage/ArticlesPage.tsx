@@ -1,6 +1,7 @@
 import { ArticleList, ArticleView } from 'app_entities/Article';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
-import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { FC, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -16,7 +17,6 @@ import {
     getArticlePageIsLoading,
     getArticlePageView,
 } from '../../model/selectors/articlePageSelector';
-import { fetchArticleList } from '../../model/services/fetchArticleList/fetchArticleList';
 import {
     articlesPageActions,
     articlesPageReducer,
@@ -51,16 +51,11 @@ const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(
-            fetchArticleList({
-                page: 1,
-            })
-        );
+        dispatch(initArticlesPage());
     });
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.articlesPage, {}, [className])}

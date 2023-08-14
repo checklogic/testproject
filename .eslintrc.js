@@ -98,6 +98,7 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/await-thenable': 'off',
+        '@typescript-eslint/no-invalid-void-type': 'off',
     },
     globals: {
         __IS_DEV__: true,

@@ -17,7 +17,7 @@ describe('fetchNextArticlesPage.test', () => {
             },
         });
 
-        const result = await thunk.callThunk(undefined);
+        await thunk.callThunk(undefined);
 
         expect(thunk.dispatch).toBeCalledTimes(4);
         expect(fetchArticleList).toHaveBeenCalledWith({ page: 3 });
@@ -35,7 +35,7 @@ describe('fetchNextArticlesPage.test', () => {
             },
         });
 
-        const result = await thunk.callThunk(undefined);
+        await thunk.callThunk(undefined);
 
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticleList).not.toHaveBeenCalled();
@@ -52,7 +52,7 @@ describe('fetchNextArticlesPage.test', () => {
             },
         });
 
-        const result = await thunk.callThunk(undefined);
+        await thunk.callThunk(undefined);
 
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticleList).not.toHaveBeenCalled();

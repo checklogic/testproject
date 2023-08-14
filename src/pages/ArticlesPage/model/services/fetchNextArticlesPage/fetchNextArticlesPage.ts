@@ -9,7 +9,6 @@ import { articlesPageActions } from '../../slice/articlesPageSlice';
 import { fetchArticleList } from '../fetchArticleList/fetchArticleList';
 
 export const fetchNextArticlesPage = createAsyncThunk<
-    // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
     void,
     undefined,
     ThunkConfig<string>
