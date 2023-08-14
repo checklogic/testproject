@@ -1,24 +1,17 @@
-import {
-    MutableRefObject,
-    ReactNode,
-    UIEvent,
-    UIEventHandler,
-    memo,
-    useRef,
-} from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './Page.module.scss';
-import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { StateSchema } from 'app/providers/StoreProvider';
 import {
     getScrollPositionByPath,
     scrollHandlerActions,
 } from 'features/ScrollHandler';
-import { useLocation } from 'react-router-dom';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { MutableRefObject, ReactNode, UIEvent, memo, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { StateSchema } from 'app/providers/StoreProvider';
+import { useLocation } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useTrottle } from 'shared/lib/hooks/useTrottle/useTrottle';
+import cls from './Page.module.scss';
 
 interface PageProps {
     className?: string;

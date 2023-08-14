@@ -1,7 +1,5 @@
 import { ArticleList, ArticleView } from 'app_entities/Article';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
-import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
-import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { FC, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -13,16 +11,16 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Page } from 'widgets/Page';
 import {
-    getArticlePageError,
     getArticlePageIsLoading,
     getArticlePageView,
 } from '../../model/selectors/articlePageSelector';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
     articlesPageActions,
     articlesPageReducer,
     getArticles,
 } from '../../model/slice/articlesPageSlice';
-import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
     className?: string;
@@ -36,7 +34,6 @@ const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
     const dispatch = useAppDispatch();
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlePageIsLoading);
-    const error = useSelector(getArticlePageError);
     const view = useSelector(getArticlePageView);
 
     const onChangeView = useCallback(
