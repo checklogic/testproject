@@ -99,6 +99,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/await-thenable': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
+        'n/no-callback-literal': 'off',
     },
     globals: {
         __IS_DEV__: true,

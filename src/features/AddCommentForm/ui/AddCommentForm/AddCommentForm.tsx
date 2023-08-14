@@ -45,7 +45,7 @@ const AddCommentForm = memo(function AddCommentForm({
     );
 
     const onSendHandler = useCallback(() => {
-        onSendComment(text || '');
+        onSendComment(text);
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
 
@@ -54,7 +54,7 @@ const AddCommentForm = memo(function AddCommentForm({
             <div className={classNames(cls.addCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
-                    value={text || ''}
+                    value={text}
                     onChange={onCommentTextChange}
                     placeholder={t('Введите текс комментария')}
                 />

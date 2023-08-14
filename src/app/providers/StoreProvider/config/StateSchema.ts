@@ -12,13 +12,14 @@ import { UserSchema } from 'app_entities/User';
 import { AxiosInstance } from 'axios';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
+import { ScrollHandlerSchema } from 'features/ScrollHandler';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
-import { NavigateOptions, To } from 'react-router-dom';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    scrollHandler: ScrollHandlerSchema;
 
     // async reducers
     loginForm?: LoginSchema;
