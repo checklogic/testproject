@@ -80,7 +80,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 120,
+                code: 150,
             },
         ],
         'react-hooks/rules-of-hooks': 'error',

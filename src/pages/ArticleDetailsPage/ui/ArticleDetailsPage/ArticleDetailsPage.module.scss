@@ -9,3 +9,12 @@
 .backBtn {
     margin-bottom: 16px;
 }
+
+.recommendations {
+    margin-top: 20px;
+    padding: 0 16px 16px;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    justify-content: start;
+}
