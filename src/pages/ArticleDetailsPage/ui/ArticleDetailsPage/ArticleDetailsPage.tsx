@@ -25,6 +25,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { getArticleComments } from '../../model/slice/articleDetailsCommentSlice';
 import { getArticleRecommendations } from '../../model/slice/articleDetailsPageRecommendationsSlice';
 import cls from './ArticleDetailsPage.module.scss';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -45,11 +46,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
     );
     // const error = useSelector(getArticleCommentsError);
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     const onSendComment = useCallback(
         (text: string) => {
@@ -78,13 +74,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
             <Page
                 className={classNames(cls.articleDetailsPage, {}, [className])}
             >
-                <Button
-                    onClick={onBackToList}
-                    theme={ButtonTheme.OUTLINE}
-                    className={cls.backBtn}
-                >
-                    {t('Назад к списку')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}
