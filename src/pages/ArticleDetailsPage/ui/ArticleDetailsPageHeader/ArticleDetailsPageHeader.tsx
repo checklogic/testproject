@@ -37,11 +37,7 @@ export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader({
                 className,
             ])}
         >
-            <Button
-                onClick={onBackToList}
-                theme={ButtonTheme.OUTLINE}
-                className={cls.backBtn}
-            >
+            <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
                 {t('Назад к списку')}
             </Button>
             {canEdit && (
