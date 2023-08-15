@@ -13,11 +13,7 @@ import { AxiosInstance } from 'axios';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollHandlerSchema } from 'features/ScrollHandler';
-import {
-    ArticleDetailsCommentsSchema,
-    ArticleDetailsPageRecommendationSchema,
-    ArticleDetailsPageSchema,
-} from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {

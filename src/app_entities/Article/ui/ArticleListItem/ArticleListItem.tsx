@@ -1,9 +1,9 @@
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Card } from 'shared/ui/Card/Card';
@@ -14,10 +14,9 @@ import {
     ArticleBlockType,
     ArticleTextBlock,
     ArticleView,
-} from '../../module/types/article';
+} from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 
 interface ArticleListItemProps {
     className?: string;
@@ -90,26 +89,27 @@ export const ArticleListItem = memo(function ArticleListItem({
     }
 
     return (
-        <AppLink
-            target={target}
-            to={RoutePath.article_details + article.id}
-            className={classNames('', {}, [className, cls[view]])}
-        >
-            <Card>
-                <div className={cls.imageWrapper}>
-                    <img
-                        alt={article.title}
-                        src={article.img}
-                        className={cls.img}
-                    />
-                    <Text text={article.createdAt} className={cls.createdAt} />
-                </div>
-                <div className={cls.infoWrapper}>
-                    {types}
-                    {views}
-                </div>
-                <Text title={article.title} className={cls.title} />
-            </Card>
+        <AppLink to={RoutePath.article_details + article.id} target={target}>
+            <div className={classNames('', {}, [className, cls[view]])}>
+                <Card>
+                    <div className={cls.imageWrapper}>
+                        <img
+                            alt={article.title}
+                            src={article.img}
+                            className={cls.img}
+                        />
+                        <Text
+                            text={article.createdAt}
+                            className={cls.createdAt}
+                        />
+                    </div>
+                    <div className={cls.infoWrapper}>
+                        {types}
+                        {views}
+                    </div>
+                    <Text title={article.title} className={cls.title} />
+                </Card>
+            </div>
         </AppLink>
     );
 });

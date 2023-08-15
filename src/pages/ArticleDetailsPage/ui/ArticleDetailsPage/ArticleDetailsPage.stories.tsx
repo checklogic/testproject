@@ -4,7 +4,7 @@ import { Article } from 'app_entities/Article';
 import {
     ArticleType,
     ArticleBlockType,
-} from 'app_entities/Article/module/types/article';
+} from 'app_entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const article: Article = {
