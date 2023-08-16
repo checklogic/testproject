@@ -1,4 +1,4 @@
-export { ScrollHandlerSchema } from './model/types/scrollHandlerSchema';
+export type { ScrollHandlerSchema } from './model/types/scrollHandlerSchema';
 
 export { getScrollPositionByPath } from './model/selectors/scrollHandler';
 export {

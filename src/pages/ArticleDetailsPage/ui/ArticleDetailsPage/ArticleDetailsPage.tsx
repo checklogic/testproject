@@ -1,7 +1,7 @@
 import { ArticleDetails, ArticleList } from 'app_entities/Article';
 import { CommentList } from 'app_entities/CommentEnt';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slice';
+import { articleDetailsPageReducer } from '../../model/slice/articleDetailsPageReducer';
 import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';

@@ -94,7 +94,6 @@ module.exports = {
                 },
             },
         ],
-        '@typescript-eslint/consistent-type-exports': 'off',
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/await-thenable': 'off',
