@@ -12,6 +12,7 @@
         "baseUrl": ".",
         "strictNullChecks": true,
         "strict": true,
+        "forceConsistentCasingInFileNames": true,
         "paths": {
             "*": ["./src/*"]
         },
