@@ -16,8 +16,8 @@ const meta = {
                 readonly: true,
                 isLoading: false,
                 form: {
-                    first: 'Elco',
-                    lastname: 'Elcome',
+                    first: 'Test',
+                    lastname: 'Test lastname',
                     age: 21,
                     currency: Currency.USD,
                     country: Country.Russia,

@@ -13,8 +13,8 @@ const meta = {
     decorators: [StoreDecorator({})],
     args: {
         data: {
-            first: 'Elco',
-            lastname: 'Elcome',
+            first: 'Test',
+            lastname: 'Test lastname',
             age: 21,
             currency: Currency.USD,
             country: Country.Russia,
