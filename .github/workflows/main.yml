@@ -19,7 +19,7 @@ jobs:
             - name: install modules
               run: yarn
             - name: build production project
-              run: yarn build:prod
+              run: yarn build:prod --stats-error-details
               if: always()
             - name: linting typescript
               run: yarn lint:ts
