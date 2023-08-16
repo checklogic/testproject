@@ -3,6 +3,8 @@
     padding: 20px 20px 20px 45px;
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .trigger {
