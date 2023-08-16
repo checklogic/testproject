@@ -6,7 +6,7 @@ import {
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Article } from 'app_entities/Article';
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
-import { ArticleDetailsPageRecommendationSchema } from '../types/ArticleDetailsPageRecommendationSchema';
+import { ArticleDetailsRecommendationSchema } from '../types/ArticleDetailsPageRecommendationSchema';
 
 const recommendationsAdapter = createEntityAdapter<Article>({
     selectId: (article: Article) => article.id,
@@ -22,7 +22,7 @@ export const getArticleRecommendations =
 const articleDetailsPageRecommendationsSlice = createSlice({
     name: 'articleDetailsPageRecommendationsSlice',
     initialState:
-        recommendationsAdapter.getInitialState<ArticleDetailsPageRecommendationSchema>(
+        recommendationsAdapter.getInitialState<ArticleDetailsRecommendationSchema>(
             {
                 isLoading: false,
                 error: undefined,
