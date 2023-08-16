@@ -1,6 +1,6 @@
 import { AboutPage, MainPage, NotFoundPage, ProfilePage } from 'pages';
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import ArticleEditPage from 'pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage';
+import { ArticleEditPage } from 'pages/ArticleEditPage';
 import { ArticlesPage } from 'pages/ArticlesPage';
 import { PathRouteProps } from 'react-router-dom';
 
