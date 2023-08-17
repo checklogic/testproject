@@ -1,13 +1,10 @@
 .page {
-    flex-grow: 1;
-    padding: 20px 20px 20px 45px;
+    padding: 10px 20px 20px 35px;
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .trigger {
-    margin: 10px;
+    margin: 10px 0;
     height: 10px;
 }

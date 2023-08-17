@@ -8,6 +8,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
@@ -32,7 +33,9 @@ export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader({
     }, [article?.id, navigate]);
 
     return (
-        <div
+        <HStack
+            gap={16}
+            justify={'between'}
             className={classNames(cls.articleDetailsPageHeader, {}, [
                 className,
             ])}
@@ -41,14 +44,10 @@ export const ArticleDetailsPageHeader = memo(function ArticleDetailsPageHeader({
                 {t('Назад к списку')}
             </Button>
             {canEdit && (
-                <Button
-                    onClick={onEditArticle}
-                    theme={ButtonTheme.OUTLINE}
-                    className={cls.editBtn}
-                >
+                <Button onClick={onEditArticle} theme={ButtonTheme.OUTLINE}>
                     {t('Редактировать')}
                 </Button>
             )}
-        </div>
+        </HStack>
     );
 });
