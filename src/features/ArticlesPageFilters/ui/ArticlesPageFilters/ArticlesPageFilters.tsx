@@ -109,7 +109,7 @@ export const ArticlesPageFilters = memo(function ArticlesPageFilters({
     );
 
     return (
-        <div className={classNames(cls.articlesPageFilters, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
             <div className={cls.sortWrapper}>
                 <ArticlesSortSelector
                     onChangeOrder={onChangeOrder}

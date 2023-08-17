@@ -8,7 +8,7 @@ import {
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Skeleton } from 'shared/ui/Sceleton';
+import { Skeleton } from 'shared/ui/Skeleton';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import {
     getArticleDetailsData,

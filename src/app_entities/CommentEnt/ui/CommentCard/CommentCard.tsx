@@ -4,7 +4,7 @@ import { CommentEnt } from '../../model/types/CommentEnt';
 import cls from './CommentCard.module.scss';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
-import { Skeleton } from 'shared/ui/Sceleton';
+import { Skeleton } from 'shared/ui/Skeleton';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { VStack } from 'shared/ui/Stack';

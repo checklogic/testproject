@@ -15,11 +15,7 @@ export const ArticleTextBlockComponent = memo(
         block,
     }: ArticleTextBlockComponentProps) {
         return (
-            <div
-                className={classNames(cls.articleTextBlockComponent, {}, [
-                    className,
-                ])}
-            >
+            <div className={classNames('', {}, [className])}>
                 {block.title && (
                     <Text title={block.title} className={cls.title} />
                 )}

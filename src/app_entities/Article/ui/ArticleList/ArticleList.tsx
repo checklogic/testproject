@@ -114,8 +114,3 @@ export const ArticleList = memo(function ArticleList({
         </WindowScroller>
     );
 });
-
-// <div className={classNames('', {}, [className, cls[view]])}>
-//     {articles.length ? articles.map(renderArticles) : null}
-//     {isLoading && getSkeletons(view)}
-// </div>

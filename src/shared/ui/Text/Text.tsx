@@ -49,7 +49,7 @@ export const Text: FC<TextProps> = memo(function Text({
 
     return (
         <div
-            className={classNames(cls.textWrapper, {}, [
+            className={classNames('', {}, [
                 className,
                 cls[theme],
                 cls[align],

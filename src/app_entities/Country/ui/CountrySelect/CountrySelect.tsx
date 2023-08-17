@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
 import { Country } from '../../model/types/country';
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 
 interface CountrySelectProps {
     className?: string;
@@ -36,10 +37,10 @@ export const CountrySelect: FC<CountrySelectProps> = memo(
         );
 
         return (
-            <Select
+            <ListBox
                 className={classNames('', {}, [className])}
                 label={t('Укажите страну')}
-                options={options}
+                items={options}
                 value={value}
                 onChange={onChangeCountryHendler}
                 readonly={readonly}

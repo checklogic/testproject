@@ -41,17 +41,14 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({
     }, [dispatch]);
 
     return (
-        <HStack
-            justify='between'
-            className={classNames('', {}, [className || ''])}
-        >
+        <HStack justify='between' className={classNames('', {}, [className])}>
             <Text title={t('Профиль')} />
             {canEdit && (
                 <>
                     {readonly ? (
                         <Button onClick={onEdit}>{t('Редактировать')}</Button>
                     ) : (
-                        <HStack gap='16'>
+                        <HStack gap='16' noMax={true}>
                             <Button
                                 theme={ButtonTheme.OUTLINE_RED}
                                 onClick={onCancelEdit}

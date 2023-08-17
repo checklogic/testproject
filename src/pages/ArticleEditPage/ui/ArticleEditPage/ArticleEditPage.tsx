@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleEditPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page';
 import { useParams } from 'react-router-dom';
@@ -15,7 +14,7 @@ const ArticleEditPage = ({ className }: ArticleEditPageProps) => {
     const isEdit = Boolean(id);
 
     return (
-        <Page className={classNames(cls.articleEditPage, {}, [className])}>
+        <Page className={classNames('', {}, [className])}>
             {isEdit
                 ? t('Редактирование статьи с id = ') + String(id)
                 : t('Создание новой статьи')}
