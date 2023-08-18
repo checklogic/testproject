@@ -10,6 +10,8 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import cls from './Navbar.module.scss';
 import { HStack } from 'shared/ui/Stack';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 
 interface NavbarProps {
     className?: string;
@@ -50,12 +52,21 @@ export const Navbar: FC<NavbarProps> = memo(function Navbar({
                         >
                             {t('Создать статью')}
                         </AppLink>
-                        <Button
-                            theme={ButtonTheme.INVERTED_CLEAR}
-                            onClick={onLogout}
-                        >
-                            {t('Выйти')}
-                        </Button>
+                        <Dropdown
+                            direction='bottom left'
+                            className={cls.dropdown}
+                            items={[
+                                {
+                                    content: t('Профиль'),
+                                    href: RoutePath.profile + authData.id,
+                                },
+                                {
+                                    content: t('Выйти'),
+                                    onClick: onLogout,
+                                },
+                            ]}
+                            trigger={<Avatar size={30} src={authData.avatar} />}
+                        />
                     </HStack>
                 </HStack>
             </header>

@@ -33,17 +33,6 @@ export const ArticleList = memo(function ArticleList({
     target,
 }: ArticleListProps) {
     const { t } = useTranslation();
-    const renderArticles = (el: Article) => {
-        return (
-            <ArticleListItem
-                key={el.id}
-                article={el}
-                view={view}
-                className={cls.card}
-                target={target}
-            />
-        );
-    };
 
     if (!isLoading && !articles.length) {
         return (
