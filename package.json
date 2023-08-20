@@ -81,6 +81,7 @@
         "identity-obj-proxy": "^3.0.0",
         "jackspeak": "^2.2.3",
         "jest": "^29.6.2",
+        "jest-html-reporters": "^3.1.4",
         "json-server": "^0.17.3",
         "loki": "^0.32.0",
         "mini-css-extract-plugin": "^2.7.6",
