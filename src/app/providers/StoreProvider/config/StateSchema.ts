@@ -7,19 +7,21 @@ import {
 } from '@reduxjs/toolkit';
 import { ArticleDetailsSchema } from 'app_entities/Article';
 import { CounterSchema } from 'app_entities/Counter';
-import { ProfileSchema } from 'app_entities/Profile';
 import { UserSchema } from 'app_entities/User';
 import { AxiosInstance } from 'axios';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollHandlerSchema } from 'features/ScrollHandler';
+import { ProfileSchema } from 'features/editableProfileCard';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     scrollHandler: ScrollHandlerSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // async reducers
     loginForm?: LoginSchema;

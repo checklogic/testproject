@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 
 const meta = {
     component: AddCommentForm,
-    title: 'feature/AddCommentForm',
+    title: 'features/AddCommentForm',
     decorators: [StoreDecorator({})],
 } satisfies Meta<typeof AddCommentForm>;
 
