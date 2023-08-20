@@ -17,6 +17,7 @@
         "lint:scss": "stylelint \"**/*.scss\"",
         "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
         "test:unit": "jest --config ./config/jest/jest.config.ts",
+        "test:unit:no:report": "jest --config ./config/jest/jest.config.ts --reporters=\"default\"",
         "test:ui": "loki test",
         "test:ui:ok": "loki approve",
         "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
