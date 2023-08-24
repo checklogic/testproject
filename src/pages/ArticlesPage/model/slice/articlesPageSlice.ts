@@ -12,7 +12,7 @@ import {
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList';
-import { LOCALSTARAGE_ARTICLES_VIEW } from 'shared/const/localstarage';
+import { LOCALSTORAGE_ARTICLES_VIEW } from 'shared/const/localstarage';
 import { SortOrder } from 'shared/types';
 
 const articlesAdapter = createEntityAdapter<Article>({
@@ -43,7 +43,7 @@ export const articlesPageSlice = createSlice({
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
-            localStorage.setItem(LOCALSTARAGE_ARTICLES_VIEW, action.payload);
+            localStorage.setItem(LOCALSTORAGE_ARTICLES_VIEW, action.payload);
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -63,7 +63,7 @@ export const articlesPageSlice = createSlice({
 
         initState: (state) => {
             const initView = localStorage.getItem(
-                LOCALSTARAGE_ARTICLES_VIEW
+                LOCALSTORAGE_ARTICLES_VIEW
             ) as ArticleView;
             if (!initView) {
                 return;

@@ -3,11 +3,11 @@
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
+    padding-right: 10px;
     align-items: center;
-    padding: 20px;
 }
 
-.dropdown,
+.actions,
 .links {
     margin-left: auto;
 }
@@ -16,7 +16,12 @@
     margin-right: 15px;
 }
 
+.createArticle {
+    width: 100%;
+}
+
 .appName {
     width: var(--sidebar-width);
     margin-left: 15px;
+    flex-shrink: 0;
 }

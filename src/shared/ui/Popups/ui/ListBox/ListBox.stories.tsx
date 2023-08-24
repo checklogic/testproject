@@ -3,7 +3,7 @@ import { ListBox } from './ListBox';
 
 const meta = {
     component: ListBox,
-    title: 'shared/ListBox',
+    title: 'shared/Popups/ListBox',
     decorators: [],
 } satisfies Meta<typeof ListBox>;
 

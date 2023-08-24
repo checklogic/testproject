@@ -1,0 +1,13 @@
+.notifications {
+    min-height: 150px;
+    max-height: 300px;
+    width: 500px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.popover {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

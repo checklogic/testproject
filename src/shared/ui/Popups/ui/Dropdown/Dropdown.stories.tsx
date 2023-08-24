@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Dropdown, DropdownItem } from './Dropdown';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 
 const items: DropdownItem[] = [
     {
@@ -15,7 +15,7 @@ const items: DropdownItem[] = [
 ];
 const meta = {
     component: Dropdown,
-    title: 'shared/Dropdown',
+    title: 'shared/Popups/Dropdown',
     decorators: [
         (Story) => (
             <div style={{ padding: 150 }}>
