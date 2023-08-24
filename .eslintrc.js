@@ -108,7 +108,6 @@ module.exports = {
         '@typescript-eslint/array-type': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
-        '@typescript-eslint/consistent-type-exports': 'off',
     },
     globals: {
         __IS_DEV__: true,
