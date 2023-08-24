@@ -101,6 +101,7 @@ module.exports = {
         'n/no-callback-literal': 'off',
         '@typescript-eslint/array-type': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+        '@typescript-eslint/no-misused-promises': 'off',
     },
     globals: {
         __IS_DEV__: true,
