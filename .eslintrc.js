@@ -45,7 +45,13 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
-        indent: [2, 4, { SwitchCase: 1 }],
+        indent: [
+            2,
+            4,
+            {
+                SwitchCase: 1,
+            },
+        ],
         // '@typescript-eslint/ban-ts-comment': 'off',
         // 'react/jsx-indent': [2, 4],
         // '@typescript-eslint/indent': [2, 4 ],
@@ -102,6 +108,7 @@ module.exports = {
         '@typescript-eslint/array-type': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
+        '@typescript-eslint/consistent-type-exports': 'off',
     },
     globals: {
         __IS_DEV__: true,

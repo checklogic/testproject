@@ -1,4 +1,9 @@
-import { getUserAuthData, userActions } from 'app_entities/User';
+import {
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
+} from 'app_entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { FC, memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -24,6 +29,8 @@ export const Navbar: FC<NavbarProps> = memo(function Navbar({
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
+    const isAdmin = useSelector(isUserAdmin);
+    const isManager = useSelector(isUserManager);
 
     const onShowModal = () => {
         setIsAuthModal(true);
@@ -35,6 +42,20 @@ export const Navbar: FC<NavbarProps> = memo(function Navbar({
     const onLogout = useCallback(() => {
         dispatch(userActions.logout());
     }, [dispatch]);
+
+    const isAdminPanelAvailable = isAdmin || isManager;
+
+    const renderAdminPanel = () => {
+        if (isAdminPanelAvailable) {
+            return [
+                {
+                    content: t('Админка'),
+                    href: RoutePath.admin_panel,
+                },
+            ];
+        }
+        return [];
+    };
 
     if (authData) {
         return (
@@ -56,6 +77,7 @@ export const Navbar: FC<NavbarProps> = memo(function Navbar({
                             direction='bottom left'
                             className={cls.dropdown}
                             items={[
+                                ...renderAdminPanel(),
                                 {
                                     content: t('Профиль'),
                                     href: RoutePath.profile + authData.id,
