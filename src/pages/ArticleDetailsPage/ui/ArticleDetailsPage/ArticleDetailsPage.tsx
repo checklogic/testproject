@@ -25,7 +25,11 @@ const reducers: ReducersList = {
 
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
     const { t } = useTranslation();
-    const { id } = useParams<{ id: string }>();
+    let { id } = useParams<{ id: string }>();
+
+    if (__PROJECT__ === 'storybook') {
+        id = '1';
+    }
 
     if (!id) {
         return (

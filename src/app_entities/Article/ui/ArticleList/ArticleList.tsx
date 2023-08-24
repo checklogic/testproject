@@ -67,7 +67,6 @@ export const ArticleList = memo(function ArticleList({
                 />
             );
         }
-
         return (
             <div key={key} style={style} className={cls.row}>
                 {items}

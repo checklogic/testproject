@@ -83,7 +83,7 @@ const article: Article = {
 
 const meta = {
     component: ArticleDetailsPage,
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
     decorators: [
         StoreDecorator({
             articleDetails: {
