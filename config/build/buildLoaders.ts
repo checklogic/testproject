@@ -3,14 +3,8 @@ import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
 import { buildBabelLoader } from './loaders/buildBalelLoader';
 
-export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
-    const typeScriptLoader: RuleSetRule = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
-
-    const cssLoader: RuleSetRule = buildCssLoaders(isDev);
+export function buildLoaders(options: BuildOptions): RuleSetRule[] {
+    const cssLoader: RuleSetRule = buildCssLoaders(options.isDev);
 
     const svgrLoader: RuleSetRule = {
         test: /\.svg$/,
@@ -26,7 +20,14 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         ],
     };
 
-    const babelLoader = buildBabelLoader();
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
-    return [babelLoader, typeScriptLoader, cssLoader, svgrLoader, fileLoader];
+    return [
+        fileLoader,
+        svgrLoader,
+        codeBabelLoader,
+        tsxCodeBabelLoader,
+        cssLoader,
+    ];
 }
