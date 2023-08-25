@@ -8,12 +8,12 @@ import {
     ArticleSortField,
     ArticleType,
     ArticleView,
-} from 'app_entities/Article';
-import { StateSchema } from 'app/providers/StoreProvider';
+} from '@/app_entities/Article';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList';
-import { LOCALSTORAGE_ARTICLES_VIEW } from 'shared/const/localstarage';
-import { SortOrder } from 'shared/types';
+import { LOCALSTORAGE_ARTICLES_VIEW } from '@/shared/const/localstarage';
+import { SortOrder } from '@/shared/types';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article: Article) => article.id,

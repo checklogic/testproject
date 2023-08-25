@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import { Article } from 'app_entities/Article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import JSImage from 'shared/assets/test/JSImage.jpeg';
+import { Article } from '@/app_entities/Article';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import JSImage from '@/shared/assets/test/JSImage.jpeg';
 
 const article: Article = {
     id: '1',

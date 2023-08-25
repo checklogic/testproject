@@ -1,10 +1,10 @@
-import { UserRole } from 'app_entities/User';
-import { AboutPage, MainPage, NotFoundPage, ProfilePage } from 'pages';
-import { AdminPanelPage } from 'pages/AdminPanelPage';
-import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import { ArticleEditPage } from 'pages/ArticleEditPage';
-import { ArticlesPage } from 'pages/ArticlesPage';
-import { ForbiddenPage } from 'pages/ForbiddenPage';
+import { UserRole } from '@/app_entities/User';
+import { AboutPage, MainPage, NotFoundPage, ProfilePage } from '@/pages';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticleEditPage } from '@/pages/ArticleEditPage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { PathRouteProps } from 'react-router-dom';
 
 export type AppRouteProps = PathRouteProps & {

@@ -15,7 +15,7 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "paths": {
-            "*": ["./src/*"]
+            "@/*": ["./src/*"]
         },
         "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },

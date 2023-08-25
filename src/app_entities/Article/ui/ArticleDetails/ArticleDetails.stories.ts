@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Article } from 'app_entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { testArticle } from 'shared/testData/testArticle/testArticle';
+import { Article } from '@/app_entities/Article/model/types/article';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { testArticle } from '@/shared/testData/testArticle/testArticle';
 import { ArticleDetails } from './ArticleDetails';
 
 const article: Article = testArticle;

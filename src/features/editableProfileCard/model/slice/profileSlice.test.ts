@@ -1,5 +1,5 @@
-import { Country } from 'app_entities/Country';
-import { Currency } from 'app_entities/Currency';
+import { Country } from '@/app_entities/Country';
+import { Currency } from '@/app_entities/Currency';
 import { ValidateProfileError } from '../../model/consts/consts';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';

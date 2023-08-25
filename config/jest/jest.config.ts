@@ -25,6 +25,7 @@ const config: Config = {
         //     '<rootDir>/__mocks__/fileMock.js',
         '\\.(s?css)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     globals: {
