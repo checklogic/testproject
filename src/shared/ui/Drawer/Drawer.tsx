@@ -19,7 +19,7 @@ interface DrawerProps {
 
 const height = window.innerHeight - 100;
 
-export const DrawerContent = memo(function DrawerContent({
+const DrawerContent = memo(function DrawerContent({
     className,
     children,
     onClose,
@@ -109,7 +109,7 @@ export const DrawerContent = memo(function DrawerContent({
     );
 });
 
-export const DrawerAsync = memo(function Drawer(props: DrawerProps) {
+const DrawerAsync = memo(function Drawer(props: DrawerProps) {
     const { isLoaded } = useAnimationLibs();
 
     if (!isLoaded) {
