@@ -29,7 +29,8 @@
         "./src/**/*.tsx",
         "./config/**/*.ts",
         "./config/**/*.tsx",
-        "webpack.config.ts"
+        "webpack.config.ts",
+        "vite.config.ts"
     ],
     "exclude": ["./json-server/**/*"]
 }

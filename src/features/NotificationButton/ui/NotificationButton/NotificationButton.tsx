@@ -1,6 +1,5 @@
 import { NotificationList } from '@/app_entities/Notification';
 import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider/AnimationProvider';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import { Icon } from '@/shared/ui/Icon/Icon';
