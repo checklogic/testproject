@@ -32,7 +32,7 @@ export const Tabs = memo(function Tabs({
 
     return (
         <div className={classNames(cls.tabs, {}, [className])}>
-            {tabs.map((tab, i) => (
+            {tabs.map((tab) => (
                 <Card
                     theme={
                         tab.value === value

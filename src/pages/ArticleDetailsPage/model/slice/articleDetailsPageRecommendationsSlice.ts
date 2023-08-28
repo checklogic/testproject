@@ -33,7 +33,7 @@ const articleDetailsPageRecommendationsSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchArticleRecommendations.pending, (state, action) => {
+            .addCase(fetchArticleRecommendations.pending, (state) => {
                 state.error = undefined;
                 state.isLoading = true;
             })

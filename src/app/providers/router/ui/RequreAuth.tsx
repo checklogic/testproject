@@ -6,11 +6,10 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 interface RequreAuthProps {
     children: JSX.Element;
-    className?: string;
     roles?: UserRole[];
 }
 
-export const RequreAuth = ({ className, children, roles }: RequreAuthProps) => {
+export const RequreAuth = ({ children, roles }: RequreAuthProps) => {
     const auth = useSelector(getUserAuthData);
     const location = useLocation();
     const userRoles = useSelector(getUserRoles);

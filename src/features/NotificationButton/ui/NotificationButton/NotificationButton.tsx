@@ -9,13 +9,7 @@ import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import cls from './NotificationButton.module.scss';
 
-interface NotificationButtonProps {
-    className?: string;
-}
-
-export const NotificationButton = memo(function NotificationButton({
-    className,
-}: NotificationButtonProps) {
+export const NotificationButton = memo(function NotificationButton() {
     const [isOpen, setIsOpen] = useState(false);
     const onOpenDrawer = useCallback(() => {
         setIsOpen(true);

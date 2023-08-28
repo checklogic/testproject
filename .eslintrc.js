@@ -10,6 +10,8 @@ module.exports = {
         'plugin:i18next/recommended',
         'prettier',
         'plugin:storybook/recommended',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
     ],
     settings: {
         react: {
@@ -43,7 +45,13 @@ module.exports = {
         sourceType: 'module',
         project: ['./tsconfig.json'],
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'unused-imports',
+    ],
     rules: {
         indent: [
             2,
@@ -70,7 +78,7 @@ module.exports = {
         '@typescript-eslint/semi': 'off',
         '@typescript-eslint/comma-dangle': 'off',
         '@typescript-eslint/member-delimiter-style': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn',
+        // '@typescript-eslint/no-unused-vars': 'warn',
         '@typescript-eslint/no-floating-promises': 'warn',
         '@typescript-eslint/space-before-function-paren': 'off',
         '@typescript-eslint/naming-convention': 'off',
@@ -108,6 +116,17 @@ module.exports = {
         '@typescript-eslint/array-type': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
+        'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
+        'unused-imports/no-unused-imports': 'error',
+        // 'unused-imports/no-unused-vars': [
+        //     'warn',
+        //     {
+        //         vars: 'all',
+        //         varsIgnorePattern: '^_',
+        //         args: 'after-used',
+        //         argsIgnorePattern: '^_',
+        //     },
+        // ],
     },
     globals: {
         __IS_DEV__: true,

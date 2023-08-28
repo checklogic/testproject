@@ -12,13 +12,7 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import { RoutePath } from '@/shared/const/router';
 
-interface AvatarDropdownProps {
-    className?: string;
-}
-
-export const AvatarDropdown = memo(function AvatarDropdown({
-    className,
-}: AvatarDropdownProps) {
+export const AvatarDropdown = memo(function AvatarDropdown() {
     const { t } = useTranslation();
     const isAdmin = useSelector(isUserAdmin);
     const isManager = useSelector(isUserManager);
