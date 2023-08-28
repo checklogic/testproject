@@ -14,6 +14,12 @@ export default ({ config }: { config: Configuration }): Configuration => {
     };
     config.resolve?.modules?.push(paths.src);
     config.resolve?.extensions?.push('.ts', '.tsx');
+    if (config.resolve?.alias) {
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            '@': paths.src,
+        };
+    }
 
     if (config.module?.rules) {
         const rules = config.module.rules as RuleSetRule[];
