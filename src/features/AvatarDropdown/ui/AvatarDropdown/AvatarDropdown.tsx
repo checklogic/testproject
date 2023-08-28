@@ -8,7 +8,7 @@ import {
     userActions,
 } from '@/entities/User';
 import { useDispatch, useSelector } from 'react-redux';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import { RoutePath } from '@/shared/const/router';
 

@@ -14,13 +14,13 @@ import { articlesPageActions } from '@/pages/ArticlesPage/model/slice/articlesPa
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useTranslation } from 'react-i18next';
-import { Card } from '@/shared/ui/Card/Card';
-import { Input } from '@/shared/ui/Input/Input';
+import { Card } from '@/shared/ui/Card';
+import { Input } from '@/shared/ui/Input';
 import { ArticlesSortSelector } from '../ArticlesSortSelector/ArticlesSortSelector';
 import { SortOrder } from '@/shared/types';
 import { fetchArticleList } from '@/pages/ArticlesPage/model/services/fetchArticleList/fetchArticleList';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
+import { TabItem, Tabs } from '@/shared/ui/Tabs';
 import { ArticleType } from '@/entities/Article/model/types/article';
 
 interface ArticlesPageFiltersProps {

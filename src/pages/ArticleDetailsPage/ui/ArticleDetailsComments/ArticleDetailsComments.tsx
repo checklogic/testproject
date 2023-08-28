@@ -2,7 +2,7 @@ import { Suspense, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CommentList } from '@/entities/CommentEnt';
 import { AddCommentForm } from '@/features/AddCommentForm';
-import { TextSize, Text } from '@/shared/ui/Text/Text';
+import { TextSize, Text } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getArticleCommentsIsLoading } from '@/pages/ArticleDetailsPage/model/selectors/comments';
 import { addCommentForArticle } from '@/pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
