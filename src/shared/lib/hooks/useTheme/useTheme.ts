@@ -1,7 +1,8 @@
 /* eslint-disable indent */
 import { useContext } from 'react';
-import { Theme, ThemeContext } from './ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { LOCALSTORAGE_THEME_KEY } from '@/shared/const/localstarage';
+import { Theme } from '@/shared/const/theme';
 
 interface UseThemeResult {
     toggleTheme: () => void;
