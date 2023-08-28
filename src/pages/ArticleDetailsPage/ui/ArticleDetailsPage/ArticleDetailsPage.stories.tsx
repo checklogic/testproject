@@ -6,12 +6,13 @@ import {
     ArticleBlockType,
 } from '@/app_entities/Article/model/types/article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import JSImage from '@/shared/assets/test/JSImage.jpeg';
 
 const article: Article = {
     id: '1',
     title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
-    img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    img: JSImage,
     views: 1022,
     user: {
         id: '1',
