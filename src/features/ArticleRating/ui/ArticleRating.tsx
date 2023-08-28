@@ -71,7 +71,7 @@ const ArticleRating = memo(function ArticleRating({
             feedbackTitle={t(
                 'Оставьте свой отзыв о статье, это поможет улучшить качество'
             )}
-            hasFeedback
+            hasFeedback={true}
         />
     );
 });

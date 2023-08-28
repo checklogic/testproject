@@ -21,7 +21,6 @@ export const StarRating = memo(function StarRating({
 }: StarRatingProps) {
     const [currentStarCount, setCurrentStarCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
-
     const onHover = (starsCount: number) => () => {
         if (!isSelected) {
             setCurrentStarCount(starsCount);
@@ -43,7 +42,7 @@ export const StarRating = memo(function StarRating({
     };
 
     return (
-        <div className={classNames(cls.starRating, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
             {stars.map((el) => (
                 <Icon
                     Svg={StarIcon}
@@ -51,10 +50,9 @@ export const StarRating = memo(function StarRating({
                     className={classNames(
                         cls.starIcon,
                         {
-                            [cls.hovered]: currentStarCount >= el,
-                            [cls.isSelected]: !!isSelected,
+                            [cls.selected]: isSelected,
                         },
-                        []
+                        [currentStarCount >= el ? cls.hovered : cls.normal]
                     )}
                     width={size}
                     height={size}

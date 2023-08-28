@@ -1,16 +1,16 @@
-.starRating {
-    color: inherit;
-}
-
 .starIcon {
-    fill: none;
+    fill: none !important;
     cursor: pointer;
 }
 
 .hovered {
-    fill: var(--primary-color);
+    fill: var(--primary-color) !important;
 }
 
-.isSelected {
+.selected {
     cursor: auto;
+}
+
+.normal {
+    fill: none !important;
 }

@@ -2,5 +2,5 @@
 /build
 .vscode
 /storybook-static
-/.loki/report.*
+.loki/report.*
 /reports
