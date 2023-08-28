@@ -1,4 +1,4 @@
-import { UserRole, getUserAuthData, getUserRoles } from '@/app_entities/User';
+import { UserRole, getUserAuthData, getUserRoles } from '@/entities/User';
 import { RoutePath } from '@/shared/const/router';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';

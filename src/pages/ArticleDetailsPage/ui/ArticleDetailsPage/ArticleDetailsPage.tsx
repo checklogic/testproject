@@ -1,4 +1,4 @@
-import { ArticleDetails } from '@/app_entities/Article';
+import { ArticleDetails } from '@/entities/Article';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';

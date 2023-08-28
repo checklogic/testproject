@@ -1,4 +1,4 @@
-import { getUserInited, userActions } from '@/app_entities/User';
+import { getUserInited, userActions } from '@/entities/User';
 import { ReactNode, Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';

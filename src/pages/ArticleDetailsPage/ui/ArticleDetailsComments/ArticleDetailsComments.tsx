@@ -1,6 +1,6 @@
 import { Suspense, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CommentList } from '@/app_entities/CommentEnt';
+import { CommentList } from '@/entities/CommentEnt';
 import { AddCommentForm } from '@/features/AddCommentForm';
 import { TextSize, Text } from '@/shared/ui/Text/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';

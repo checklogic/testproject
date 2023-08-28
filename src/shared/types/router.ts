@@ -1,4 +1,4 @@
-import { UserRole } from '@/app_entities/User';
+import { UserRole } from '@/entities/User';
 import { PathRouteProps } from 'react-router-dom';
 
 export type AppRouteProps = PathRouteProps & {

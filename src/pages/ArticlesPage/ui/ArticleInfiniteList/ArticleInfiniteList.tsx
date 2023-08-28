@@ -1,4 +1,4 @@
-import { ArticleList } from '@/app_entities/Article';
+import { ArticleList } from '@/entities/Article';
 import {
     getArticlePageError,
     getArticlePageIsLoading,

@@ -6,7 +6,7 @@ import {
     isUserAdmin,
     isUserManager,
     userActions,
-} from '@/app_entities/User';
+} from '@/entities/User';
 import { useDispatch, useSelector } from 'react-redux';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';

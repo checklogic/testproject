@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import { Article, ArticleType } from '@/app_entities/Article';
-import { ArticleBlockType } from '@/app_entities/Article/model/types/article';
+import { Article, ArticleType } from '@/entities/Article';
+import { ArticleBlockType } from '@/entities/Article/model/types/article';
 import JSImage from '@/shared/assets/test/JSImage.jpeg';
 import testAvatar from '@/shared/assets/test/testAvatar.jpg';
 import ExampleImage from '@/shared/assets/test/Example.jpg';

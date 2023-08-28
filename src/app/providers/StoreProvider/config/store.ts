@@ -4,8 +4,8 @@ import {
     ReducersMapObject,
     configureStore,
 } from '@reduxjs/toolkit';
-import { counterReducer } from '@/app_entities/Counter';
-import { userReducer } from '@/app_entities/User';
+import { counterReducer } from '@/entities/Counter';
+import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';

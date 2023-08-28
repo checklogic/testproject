@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import { Article } from '@/app_entities/Article';
+import { Article } from '@/entities/Article';
 import {
     ArticleType,
     ArticleBlockType,
-} from '@/app_entities/Article/model/types/article';
+} from '@/entities/Article/model/types/article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import JSImage from '@/shared/assets/test/JSImage.jpeg';
 

@@ -11,7 +11,7 @@ function isAbsolutePath(value: string) {
     const layers = [
         'app',
         'shared',
-        'app_entities',
+        'entities',
         'features',
         'pages',
         'widgets',

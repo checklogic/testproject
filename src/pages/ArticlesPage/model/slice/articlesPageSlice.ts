@@ -8,7 +8,7 @@ import {
     ArticleSortField,
     ArticleType,
     ArticleView,
-} from '@/app_entities/Article';
+} from '@/entities/Article';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList';

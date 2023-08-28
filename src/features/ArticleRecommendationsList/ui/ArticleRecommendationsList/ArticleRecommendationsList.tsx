@@ -1,4 +1,4 @@
-import { ArticleList } from '@/app_entities/Article';
+import { ArticleList } from '@/entities/Article';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

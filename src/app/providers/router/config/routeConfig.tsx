@@ -1,4 +1,4 @@
-import { UserRole } from '@/app_entities/User';
+import { UserRole } from '@/entities/User';
 import { AboutPage, MainPage, NotFoundPage, ProfilePage } from '@/pages';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';

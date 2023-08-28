@@ -1,4 +1,4 @@
-import { getArticleDetailsData } from '@/app_entities/Article';
+import { getArticleDetailsData } from '@/entities/Article';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
