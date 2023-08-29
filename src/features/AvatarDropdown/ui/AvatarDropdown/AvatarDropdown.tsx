@@ -1,16 +1,16 @@
-import { memo, useCallback } from 'react';
-import cls from './AvatarDropdown.module.scss';
-import { useTranslation } from 'react-i18next';
 import {
     getUserAuthData,
     isUserAdmin,
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { useDispatch, useSelector } from 'react-redux';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
-import { RoutePath } from '@/shared/const/router';
+import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import cls from './AvatarDropdown.module.scss';
 
 export const AvatarDropdown = memo(function AvatarDropdown() {
     const { t } = useTranslation();
@@ -29,7 +29,7 @@ export const AvatarDropdown = memo(function AvatarDropdown() {
             return [
                 {
                     content: t('Админка'),
-                    href: RoutePath.admin_panel,
+                    href: getRouteAdminPanel(),
                 },
             ];
         }
@@ -48,7 +48,7 @@ export const AvatarDropdown = memo(function AvatarDropdown() {
                 ...renderAdminPanel(),
                 {
                     content: t('Профиль'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('Выйти'),

@@ -1,6 +1,5 @@
-import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
+import { getRouteArticleDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -8,6 +7,8 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     Article,
     ArticleBlockType,
@@ -16,7 +17,6 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
-import { RoutePath } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -76,7 +76,7 @@ export const ArticleListItem = memo(function ArticleListItem({
                         />
                     )}
                     <div className={cls.footer}>
-                        <AppLink to={RoutePath.article_details + article.id}>
+                        <AppLink to={getRouteArticleDetails(article.id)}>
                             <Button theme={ButtonTheme.OUTLINE}>
                                 {t('Читать далее...')}
                             </Button>
@@ -89,7 +89,7 @@ export const ArticleListItem = memo(function ArticleListItem({
     }
 
     return (
-        <AppLink to={RoutePath.article_details + article.id} target={target}>
+        <AppLink to={getRouteArticleDetails(article.id)} target={target}>
             <div className={classNames('', {}, [className, cls[view]])}>
                 <Card>
                     <div className={cls.imageWrapper}>

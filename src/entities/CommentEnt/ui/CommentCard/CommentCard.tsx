@@ -1,13 +1,13 @@
-import { memo } from 'react';
+import { getRouteProfile } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
+import { memo } from 'react';
 import { CommentEnt } from '../../model/types/CommentEnt';
 import cls from './CommentCard.module.scss';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppLink } from '@/shared/ui/AppLink';
-import { VStack } from '@/shared/ui/Stack';
-import { RoutePath } from '@/shared/const/router';
 
 interface CommentCardProps {
     className?: string;
@@ -48,7 +48,7 @@ export const CommentCard = memo(function CommentCard({
             gap={8}
             className={classNames(cls.commentCard, {}, [className])}
         >
-            <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+            <AppLink to={getRouteProfile(comment.user.id)}>
                 {comment.user.avatar ? (
                     <Avatar size={30} src={comment.user.avatar} />
                 ) : null}
