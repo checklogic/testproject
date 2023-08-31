@@ -4,6 +4,7 @@ import { loader as miniCssLoader } from 'mini-css-extract-plugin';
 export const buildCssLoaders = (isDev: boolean): RuleSetRule => {
     return {
         test: /\.s[ac]ss$/i,
+        exclude: /node_modules/,
         use: [
             isDev ? 'style-loader' : miniCssLoader,
             {
