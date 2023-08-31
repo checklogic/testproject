@@ -12,8 +12,9 @@ import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfin
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useTrottle } from '@/shared/lib/hooks/useTrottle/useTrottle';
 import cls from './Page.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
@@ -21,11 +22,8 @@ interface PageProps {
 
 export const PAGE_ID = 'PAGE_ID';
 
-export const Page = memo(function Page({
-    className,
-    children,
-    onScrollEnd,
-}: PageProps) {
+export const Page = memo(function Page(props: PageProps) {
+    const { className, children, onScrollEnd } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -59,6 +57,7 @@ export const Page = memo(function Page({
             className={classNames(cls.page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? (

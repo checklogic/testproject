@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
 import { ArticlesSortSelector } from '../ArticlesSortSelector/ArticlesSortSelector';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { fetchArticleList } from '@/pages/ArticlesPage/model/services/fetchArticleList/fetchArticleList';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { TabItem, Tabs } from '@/shared/ui/Tabs';
