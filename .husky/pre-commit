@@ -3,4 +3,3 @@
 
 yarn lint:ts 
 yarn lint:scss
-yarn test:unit:no:report
