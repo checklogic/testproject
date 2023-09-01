@@ -29,57 +29,50 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: install modules
               run: yarn
-            # - name: build production project
-            #   run: yarn build:prod
-            #   if: always()
+            - name: build production project
+              run: yarn build:prod
+              if: always()
             - name: build storybook
               run: yarn storybook:build
               if: always()
             - name: screenshot testing
               run: yarn test:ui:ci
               if: always()
-            # - name: unit testing
-            #   if: always()
-            #   run: yarn test:unit
+            - name: unit testing
+              if: always()
+              run: yarn test:unit
             - name: Generate HTML report
               run: yarn test:ui:report
               if: always()
             - name: Setup Pages
               uses: actions/configure-pages@v3
               if: always()
-            # - name: Fix permissions
-            #   run: |
-            #       chmod -c -R +rX "_site/" | while read line; do
-            #       echo "::warning title=Invalid file permissions automatically fixed::$line"
-            #       done
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               if: always()
               with:
                   path: '.loki'
-            - name: Link
-              run: echo "https://checklogic.github.io/testproject/report.html"
-                  done
+
             - name: Deploy to GitHub Pages
               id: deployment
               if: always()
               uses: actions/deploy-pages@v2
 
-    # checks:
-    #     runs-on: ubuntu-latest
-    #     strategy:
-    #         matrix:
-    #             node-version: [18.x]
-    #     steps:
-    #         - uses: actions/checkout@v2
-    #         - name: Staring Node.js ${{ matrix.node-version }}
-    #           uses: actions/setup-node@v1
-    #           with:
-    #               node-version: ${{ matrix.node-version }}
-    #         - name: install modules
-    #           run: yarn
-    #         - name: linting typescript
-    #           run: yarn lint:ts
-    #           if: always()
-    #         - name: linting css
-    #           run: yarn lint:scss
+    checks:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [18.x]
+        steps:
+            - uses: actions/checkout@v3
+            - name: Staring Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install modules
+              run: yarn
+            - name: linting typescript
+              run: yarn lint:ts
+              if: always()
+            - name: linting css
+              run: yarn lint:scss
