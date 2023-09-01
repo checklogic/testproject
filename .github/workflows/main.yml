@@ -50,8 +50,13 @@ jobs:
             - name: Setup Pages
               uses: actions/configure-pages@v2
               if: always()
+            - name: Fix permissions
+              run: |
+                  chmod -c -R +rX "_site/" | while read line; do
+                  echo "::warning title=Invalid file permissions automatically fixed::$line"
+                  done
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v2
               if: always()
               with:
                   path: 'reports'
