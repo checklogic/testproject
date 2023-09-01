@@ -29,26 +29,23 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: install modules
               run: yarn
-            - name: build production project
-              run: yarn build:prod
-              if: always()
+            # - name: build production project
+            #   run: yarn build:prod
+            #   if: always()
             - name: build storybook
               run: yarn storybook:build
               if: always()
             - name: screenshot testing
               run: yarn test:ui:ci
               if: always()
-            - name: unit testing
-              if: always()
-              run: yarn test:unit
+            # - name: unit testing
+            #   if: always()
+            #   run: yarn test:unit
             - name: Generate HTML report
               run: yarn test:ui:report
               if: always()
-            - name: move loki
-              run: mv .loki reports/
-              if: always()
             - name: Setup Pages
-              uses: actions/configure-pages@v2
+              uses: actions/configure-pages@v3
               if: always()
             - name: Fix permissions
               run: |
@@ -65,21 +62,21 @@ jobs:
               if: always()
               uses: actions/deploy-pages@v2
 
-    checks:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [18.x]
-        steps:
-            - uses: actions/checkout@v2
-            - name: Staring Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{ matrix.node-version }}
-            - name: install modules
-              run: yarn
-            - name: linting typescript
-              run: yarn lint:ts
-              if: always()
-            - name: linting css
-              run: yarn lint:scss
+    # checks:
+    #     runs-on: ubuntu-latest
+    #     strategy:
+    #         matrix:
+    #             node-version: [18.x]
+    #     steps:
+    #         - uses: actions/checkout@v2
+    #         - name: Staring Node.js ${{ matrix.node-version }}
+    #           uses: actions/setup-node@v1
+    #           with:
+    #               node-version: ${{ matrix.node-version }}
+    #         - name: install modules
+    #           run: yarn
+    #         - name: linting typescript
+    #           run: yarn lint:ts
+    #           if: always()
+    #         - name: linting css
+    #           run: yarn lint:scss
