@@ -57,6 +57,9 @@ jobs:
               if: always()
               with:
                   path: '.loki'
+            - name: Link
+              run: echo "https://checklogic.github.io/testproject/report.html"
+                  done
             - name: Deploy to GitHub Pages
               id: deployment
               if: always()
