@@ -3,4 +3,4 @@
 .vscode
 /storybook-static
 .loki/report.*
-/reports
+/reports/unit

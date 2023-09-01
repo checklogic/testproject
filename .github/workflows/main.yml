@@ -44,6 +44,9 @@ jobs:
             - name: Generate HTML report
               run: yarn test:ui:report
               if: always()
+            - name: move loki report
+              run: mv .loki reports/
+              if: always()
             - name: Setup Pages
               uses: actions/configure-pages@v3
               if: always()
@@ -51,8 +54,7 @@ jobs:
               uses: actions/upload-pages-artifact@v2
               if: always()
               with:
-                  path: '.loki'
-
+                  path: 'repots'
             - name: Deploy to GitHub Pages
               id: deployment
               if: always()
